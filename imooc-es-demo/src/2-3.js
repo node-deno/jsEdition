@@ -51,6 +51,58 @@
 //     console.log(str[i]);
 // }
 
-let str = "imooc";
-let [a, b, c, d, e] = str;
-console.log(a,b,c,d,e);
+// let str = "imooc";
+// let [a, b, c, d, e] = str;
+// console.log(a,b,c,d,e);
+
+// 结构赋值的应用场景
+
+// 赋一些默认值
+// let [a, b, c = 8] = [4, 5];
+// console.log(a, b, c);
+// let [a, b, c = 8] = [4, 5, 6];
+// console.log(a, b, c);
+
+// let { name, age = 18 } = {
+//   name: "xiecheng",
+// //   age: 34,
+// };
+// console.log(name, age);
+
+// function foo() {
+//   console.log(123);
+// }
+// let [a = foo()] = [1];
+
+// 对函数的参数进行解构赋值
+// function foo([a, b, c]) {
+//   console.log(a, b, c);
+// }
+// let arr = [1, 2, 3];
+// foo(arr);
+
+// function foo({name,age}){
+//     console.log(name,age);
+// }
+// let obj={
+//     name:'xiecheng',
+//     age:14
+// }
+// foo(obj)
+
+// 对返回值进行解构赋值
+// function foo() {
+//   let obj = {
+//     name: "xiecheng",
+//     age: 34,
+//     school: "***",
+//   };
+//   return obj;
+// }
+// let { name, age } = foo();
+// console.log(name, age);
+
+// 提取JSON数据
+let json = '{"a":"hello","b":"world"}';
+let { a, b } = JSON.parse(json); //先将JSON转化为对象
+console.log(a, b);
